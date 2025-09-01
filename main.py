@@ -1,6 +1,14 @@
-def main():
-    print("Hello from django-orm!")
+import os
+import django
 
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings")
+django.setup()
 
-if __name__ == "__main__":
-    main()
+from myapp.models import Book
+
+# Create an entry
+Book.objects.create(title="Django ORM", author="Prime")
+
+# Fetch all books
+for book in Book.objects.all():
+    print(book)
