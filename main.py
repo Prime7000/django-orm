@@ -7,7 +7,7 @@ django.setup()
 from myapp.models import Book
 
 # Create an entry
-Book.objects.create(title="Django ORM", author="Prime")
+Book.objects.create(title="how to love", author="senu")
 
 # Fetch all books
 for book in Book.objects.all():
